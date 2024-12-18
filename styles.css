@@ -75,12 +75,25 @@ body {
     color:aliceblue;
     background-color: rgba(0,0,0, 0.5);
     min-width:40vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+  display:block;
+  
+}
+
+img[id="chillGuy"] {
+  max-width:40%;
+  content:url(./95c.png);
+  display:block;  
 }
 
 .form {
     background-color: antiquewhite;
-    flex:2 0 auto;
-
+    flex:1 0 auto;
     display:flex;
     flex-direction: column;
 }
