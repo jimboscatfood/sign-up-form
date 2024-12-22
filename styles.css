@@ -103,7 +103,6 @@ img[id="chillGuy"] {
 .form-description {
     flex:1 1 20vh;
     background-color: #c9833e;
-    vertical-align: middle;
 }
 
 .form-content {
@@ -122,19 +121,73 @@ input {
   display:block;
 }
 
+label {
+  font-size: 0.8rem;
+  margin-left:2px;
+}
+
 form {
   max-width: 100%;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-top:1rem;
+  gap:2rem;
 }
 
 form div {
   display:flex;
-  padding-top: 1rem;
   gap:3rem;
 }
 
 .form > div {
   padding:0 2rem;
+}
+
+/* Reset default input appearance */
+input,
+textarea,
+select,
+button {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Add form validation for UX*/
+input {
+  appearance: none;
+  border-color:#091ad4;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px silver;
+}
+
+input:required:empty {
+  border-color:#091ad4;
+}
+
+input[type="text"]:invalid {
+  border-color: red;
+}
+
+input[type="text"]:invalid + span {
+  display:block;
+  margin:0;
+  padding:0;
+  position: relative;
+}
+
+input[type="text"]:invalid + span::after{
+  content:"* Please enter a valid name";
+  font-size: 0.7rem;
+  color:red;
+  position:absolute;
+}
+
+input:focus {
+  background-color: #e8e2dd;
+  outline: none;
+  border:2px solid gold;
+  box-shadow: 0 0 10px #719ECE;
 }
