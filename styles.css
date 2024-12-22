@@ -60,6 +60,7 @@ body {
     flex-direction: row;
     align-items: stretch;
     min-height: 100vh;
+    max-width: 100vw;
 }
 
 .background {
@@ -82,7 +83,6 @@ body {
 
 h1 {
   display:block;
-  
 }
 
 img[id="chillGuy"] {
@@ -93,8 +93,48 @@ img[id="chillGuy"] {
 
 .form {
     background-color: antiquewhite;
-    flex:1 0 auto;
+    flex:1 1 auto;
     display:flex;
     flex-direction: column;
+    justify-content: flex-start;
+
 }
 
+.form-description {
+    flex:1 1 20vh;
+    background-color: #c9833e;
+    vertical-align: middle;
+}
+
+.form-content {
+    flex:3 0 30vh;
+    background-color:#a19b96;
+    color:#fff;
+}
+
+.form-submit {
+    flex:2 0 20vh;
+    background-color: #3ab9b3;
+
+}
+
+input {
+  display:block;
+}
+
+form {
+  max-width: 100%;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+form div {
+  display:flex;
+  padding-top: 1rem;
+  gap:3rem;
+}
+
+.form > div {
+  padding:0 2rem;
+}
