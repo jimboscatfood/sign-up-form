@@ -26,11 +26,13 @@
                 <div class="entry">
                     <p>
                         <label for="fName">FIRST NAME</label>
-                        <input type="text" id="fName" name="fName">
+                        <input type="text" id="fName" name="fName" placeholder="Peter" pattern="[A-Za-z ]{1,255}" required>
+                        <span></span>
                     </p>
                     <p>
                         <label for="lName">LAST NAME</label>
-                        <input type="text" id="lName" name="lName">
+                        <input type="text" id="lName" name="lName" placeholder="Parker" pattern="[A-Za-z ]{1,255}" required>
+                        <span></span>
                     </p>
                 </div>
 
@@ -38,21 +40,25 @@
                     <p>
                         <label for="email">EMAIL</label>
                         <input type="email" id="email" name="email">
+                        <span></span>
                     </p>
                     <p>
                         <label for="phoneNum">PHONE NUMBER</label>
-                        <input type="tel" id="phoneNum" name="phoneNum">
+                        <input type="tel" id="phoneNum" name="phoneNum" pattern="[0-9]{8,20}">
+                        <span></span>
                     </p>
                 </div>
 
                 <div class="entry">
                     <p>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" required>
+                        <span></span>
                     </p>
                     <p>
                         <label for="passwordConfirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="passwordConfirm" name="passwordConfirm">
+                        <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+                        <span></span>
                     </p>
                 </div>
             </form>
