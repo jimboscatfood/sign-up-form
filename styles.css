@@ -65,7 +65,7 @@ body {
 
 .background {
     background-image: url(./my-new-character-meme-6.jpeg);
-    background-size: cover;
+    background-size:auto;
 }
 
 .logo-title {
@@ -75,7 +75,7 @@ body {
     text-align: center;
     color:aliceblue;
     background-color: rgba(0,0,0, 0.5);
-    min-width:40vw;
+    max-width:40vw;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@ img[id="chillGuy"] {
 
 .form {
     background-color: antiquewhite;
-    flex:1 1 auto;
+    flex:3 1 auto;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -149,10 +149,11 @@ input,
 textarea,
 select,
 button {
-  width: 150px;
-  padding: 0;
+  width: 200px;
+  padding: 0.3rem;
   margin: 0;
   box-sizing: border-box;
+  margin-top:3px;
 }
 
 /* Add form validation for UX*/
@@ -163,31 +164,63 @@ input {
   box-shadow: inset 2px 2px silver;
 }
 
-input:required:empty {
+input:required {
   border-color:#091ad4;
 }
 
-input[type="text"]:invalid {
+input:invalid {
   border-color: red;
 }
 
-input[type="text"]:invalid + span {
+input + span {
   display:block;
   margin:0;
   padding:0;
   position: relative;
 }
 
+input:required + span::before{
+  content:"Required";
+  font-size: 0.8rem;
+  color:white;
+  position:absolute;
+  background-color: black;
+  top: -61px;
+  left: 146px;
+  padding:0 2px;
+}
+
 input[type="text"]:invalid + span::after{
   content:"* Please enter a valid name";
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color:red;
   position:absolute;
 }
 
-input:focus {
+input[type="password"]:invalid + span::after{
+  content:"* Please enter a valid password";
+  font-size: 0.8rem;
+  color:red;
+  position:absolute;
+}
+
+input[type="email"]:invalid + span::after{
+  content:"* Please enter a valid email";
+  font-size: 0.8rem;
+  color:red;
+  position:absolute;
+}
+
+input[type="tel"]:invalid + span::after{
+  content:"* Please enter a valid phone number";
+  font-size: 0.8rem;
+  color:red;
+  position:absolute;
+}
+
+input:focus, input:required:focus {
   background-color: #e8e2dd;
-  outline: none;
+  outline: none !important;
   border:2px solid gold;
   box-shadow: 0 0 10px #719ECE;
 }
