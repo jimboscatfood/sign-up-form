@@ -48,6 +48,13 @@
   }
 /* CSS reset */
 
+/* Define CSS custom properties for form font styles */
+:root {
+  --font-type: Arial, Helvetica, sans-serif;
+  --font-color: #fff;
+}
+
+
 /* Import webfont */
 @font-face {
   font-family:"norse-bold";
@@ -92,17 +99,19 @@ img[id="chillGuy"] {
 }
 
 .form {
-    background-color: antiquewhite;
     flex:3 1 auto;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-family: var(--font-type);
+    color: var(--font-color)
 
 }
 
 .form-description {
     flex:1 1 20vh;
     background-color: #c9833e;
+    font-size: 1.2rem;
 }
 
 .form-content {
