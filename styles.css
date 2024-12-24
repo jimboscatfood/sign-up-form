@@ -111,7 +111,12 @@ img[id="chillGuy"] {
 .form-description {
     flex:1 1 20vh;
     background-color: #c9833e;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.form-description p:nth-child(1) {
+  padding-top: 5%;
+
 }
 
 .form-content {
@@ -121,7 +126,7 @@ img[id="chillGuy"] {
 }
 
 .form-submit {
-    flex:2 0 20vh;
+    flex:1 1 20vh;
     background-color: #3ab9b3;
 
 }
@@ -150,7 +155,7 @@ form div {
 }
 
 .form > div {
-  padding:0 2rem;
+  padding:1rem 2rem;
 }
 
 /* Reset default input appearance */
@@ -240,5 +245,4 @@ button {
   padding:8px;
   border-radius: 5px;
   font-size: 1.2rem;
-  margin-top:5%;
 }
